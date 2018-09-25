@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Signup</h2>
+    <div class="form-outside">
+        <div class="form-inside">
+            <form method="post">
+                <label for="username"><p>Username</p>
+                    <p class="disclaimer">(choose your username)</p>
+                    <input type="text" id="username" name="username" value="{{username}}" />
+                </label>
+                <br />
+                <p class="error">{{error_u}}</p>
+                <br />
+                <label for="password"><p>Password</p>
+                    <p class="disclaimer">(lowercase, uppercase, number, and special character)</p>
+                    <input type="password" id="password" name="password" value="{{password}}" />
+                </label>
+                <br />
+                <p class="error">{{error_p}}</p>
+                <br />
+                <label for="verify"><p>Verify Password</p>
+                    <p class="disclaimer">(make sure it is the same as above)</p>
+                    <input type="password" id="verify" name="verify" value="{{verify}}" />
+                </label>
+                <br />
+                <p class="error">{{error_v}}</p>
+                <br />
+                <label for="email"><p>Email</p>
+                    <p class="disclaimer">(optional)</p>
+                    <input type="text" id="email" name="email" value="{{email}}" />
+                </label>
+                <br />
+                <p class="error">{{error_e}}</p>
+                <br />
+                <div class="button">
+                    <input type="submit" value="Signup" />
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
