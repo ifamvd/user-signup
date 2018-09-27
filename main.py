@@ -70,7 +70,7 @@ def index():
                 email = ''
                 password = ''
                 verify = ''
-            elif at_count > 1 or dot_count < 1:
+            elif at_count > 1 or dot_count > 1:
                 error_e = 'Please type in a valid email address.'
                 email = ''
                 password = ''
