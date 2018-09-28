@@ -41,9 +41,9 @@ def index():
         elif check_space(password):
             error_p = 'Space character(s) found. Omit space(s).'
             password = ''
-        elif not is_strong(password):
-            error_p = 'Password is not strong enough. Please type in a valid password'
-            password = ''
+        #elif not is_strong(password):
+            #error_p = 'Password is not strong enough. Please type in a valid password'
+            #password = ''
         if not verify:
             error_v = 'You left this blank. Please verify password.'
             password = ''
@@ -70,7 +70,7 @@ def index():
                 email = ''
                 password = ''
                 verify = ''
-            elif at_count > 1 or dot_count > 1:
+            elif at_count > 1 or at_count == 0 or dot_count > 1 or dot_count == 0:
                 error_e = 'Please type in a valid email address.'
                 email = ''
                 password = ''
